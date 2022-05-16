@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La realidad detrás de las Redes Sociales</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+		<div id="popUpLanguage" style="display:none;width:100%;height:100%;background-color: rgb(255, 189, 89);">
+			<div id="closeButton"onclick="popOffLanguage()">x</div>
+			<div style="margin:40px;color: beige; font-family:'Anonymous Pro', monospace;text-align:center;font-size:30px;font-weight: bolder;">Language</div>
+			<div class="language" onclick="chooseLanguage(this)" >ENGLISH</div>
+			<div class="language" onclick="chooseLanguage(this)">ESPAÑOL</div>
+	
+		</div>
+		<div id="FirstScene" >
+			<img src="content/language.png" class="Button" onclick="popUpLanguage()" id="button2" style="width: 80px;margin: 0px;margin-left: 85%;margin-top: 15px;">
+			<img src="content/GIF.gif" class="portada">
+			<img src="content/ESPAÑOL.png" class="Button" id="button1" style="width:180px;transform: translateY(610%);margin-left: 42%;">
+		</div>
+		<div id ="SecondScene" style="display:none;">
+			<div class="horizontalbar" style="height:80px;display:block;background-color: black;top:0%"></div>
+			<div id="story">
+	
+			</div>
+		</div>
+		<div id="cargando">
+			<img src="content/cargando.gif">
+		</div>
+		<div id="Presentation" style="display:none;text-align:center;height:100%;width:100%;background-repeat: no-repeat;">
+		</div>
+		<div id="Round1">
+			
+			<div id="lifes"></div>
+			<img src="content/avatar.png" class="avatar_">
+			<img src="content/circulo.png" class="circulo">
+			<div class="Questions">
+			</div>
+			<div id="levels">
+				<div id="classification"> 
+				</div>
+			</div>
+			<div id="Result" style="display:none">
+				<div style="margin-bottom:30px"></div>
+				<img >
+			</div>
+			<div id="NextQuestion" style="display:none;">
+			</div>
+		</div>
+		<div id="Round2">
+			<div class="title" style="position:relative;font-size:65px;"></div>
+			<div style="position:relative;margin:0px;top:30px;text-align:center;color:red;font-size:24px"></div>
+			<div class="result" id="accept"> 
+				<p>I have </p>
+				<img src="content/accept.png" style="width:30%">
+			</div>
+			<div class="result" id="reject">
+				<p>I haven't </p>
+				<img src="content/reject.png" style="width:30%">
+			</div>
+			<ol class="cards-list">
+			</ol>
+			
+		</div>
+		
+		<div class="templates">
+			<div id="finalScreen" style="margin-top: 100px;">
+				<div class="title2" style="font-size:22px;margin-bottom:50px;">WELL DONE!</div>
+				<div class="title2">You have reached</div>
+				<div class="contador">
+					<div id="bar"></div>
+					<div id="points"></div>
+				</div>
+				<div class="title2">likes!</div>
+				<div class="title2" style="background-color: rgba(251, 247, 190, 0.66); padding: 10px;margin-left: 40px;margin-right: 40px;">Después de jugar a este minijuego te habrás dado cuenta de lo mucho que influyen las redes sociales en la percepción de nuestra imagen corporal. Son muchos los factores a los que estamos expuestos y que sin darnos cuenta nos hacen actuar de una manera que puede afectarnos no solo a nosotros mismos sino también a otros usuarios. Es por eso que tú eres la única persona capaz de convertir las redes sociales en un lugar mejor en el que todo el mundo tiene su sitio sin importar su aspecto físico. </div>
+				<div class="title2" style="margin-top:50px;">Please, before leaving answer this questionnaire :)</div>
+				<A HREF="https://docs.google.com/forms/d/e/1FAIpQLSdl0BIydfqttVGG27DUP80pSLHy8IZt1nizhIQyATnwMxjgvg/viewform?embedded=true" style="text-align:center;width:120px;font-family: 'Varela', sans-serif;margin: auto;display: block;"> Haz click aquí. </A>
+			</div>
+			<button class="qu-ans">
+				<img src="">
+				<p> </p>
+			</button>
+			<div class="info">
+				<div class="Info"></div>
+				<div class="Response"></div>
+				<div class="Response"></div>
+			</div>
+			<div class="level">
+				<div class="levelType"></div>
+				<img src="">
+				
+			</div>
+			<li class="card">
+				<img style="pointer-events: none;">
+				<p class="message"></p>
+			</li>
+			<div id="avatars" style="display:none">
+				<div id="avatar1" class="avatar" >
+					<img src="content/avatars/avatar1.png">
+				</div>
+				<div id="avatar2" class="avatar">
+					<img src="content/avatars/avatar2.png">
+				</div>
+				<div id="avatar3" class="avatar">
+					<img src="content/avatars/avatar3.png">
+				</div>
+			</div>
+		</div>
+	
+	<script src="src/database.js"></script>
+	<script src="src/round2.js"></script>
+	<script src="src/question.js"></script>
+	<script src="src/block.js"></script>
+	<script src="src/level.js"></script>
+	<script src="src/game.js"></script>
+	<script src="src/main.js"></script>
+</body>
+</html>
